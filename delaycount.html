@@ -1,0 +1,23 @@
+<html>
+    <body>
+        <div id="counterDiv">
+            counts:<span id="countspan">0</span>
+        </div>
+        <div>
+            <button id="countButton" onclick="inc()">
+                count
+            </button>
+        </div>
+    </body>
+    <script>
+        function inc() {
+            var i=document.getElementById('countspan').innerHTML;
+            document.getElementById('countButton').disabled=true;
+            i=(1*i)+1;
+            window.setTimeout(() => {
+                document.getElementById('countspan').innerHTML=i;
+                document.getElementById('countButton').disabled=false;
+            },2000);
+        }
+    </script>
+</html>
