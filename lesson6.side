@@ -1,0 +1,1116 @@
+{
+  "id": "bd2111cd-4b73-4127-ba96-ee00757ad02f",
+  "version": "2.0",
+  "name": "selenium_tests",
+  "url": "https://www.imdb.com/registration/signin",
+  "tests": [{
+    "id": "3b92af0e-39c3-4cec-96e3-7b3d10644d95",
+    "name": "maltapark-improved",
+    "commands": [{
+      "id": "a3ee36b3-630c-4786-baa1-07f0cad09d9d",
+      "comment": "",
+      "command": "open",
+      "target": "https://maltapark.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1b95ae4a-9e4e-40e4-97dc-3faa953d2c4b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.getComputedStyle(document.querySelector('a[id=\"login-button\"]')).display != \"none\"",
+      "targets": [],
+      "value": "loginButtonPresent"
+    }, {
+      "id": "24e4489c-6d09-4ed2-879d-e4a2cbcd8da2",
+      "comment": "",
+      "command": "echo",
+      "target": "${loginButtonPresent}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "00dbc1cc-06d0-40a5-b80a-6b587067761d",
+      "comment": "",
+      "command": "if",
+      "target": "${loginButtonPresent}",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "d5fa6c39-9137-459d-b6ee-2158fa1fa2f1",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=login-button",
+      "targets": [
+        ["id=login-button", "id"],
+        ["linkText=login", "linkText"],
+        ["css=#login-button", "css:finder"],
+        ["xpath=//a[contains(text(),'login')]", "xpath:link"],
+        ["xpath=//a[@id='login-button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, '/login')]", "xpath:href"],
+        ["xpath=//div[2]/a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'login')]", "xpath:innerText"]
+      ],
+      "value": "login"
+    }, {
+      "id": "5bae3b99-17c7-48ac-8768-eb6915304f87",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32d2fae5-9407-4ff9-9dfe-a996ee062527",
+      "comment": "",
+      "command": "click",
+      "target": "css=i.ui.big.white.ellipsis",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "34e2f222-c927-454b-a84d-1d036a4b301e",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Login",
+      "targets": [
+        ["linkText=Login", "linkText"],
+        ["css=.ui > .phone-only", "css:finder"],
+        ["xpath=//a[contains(text(),'Login')]", "xpath:link"],
+        ["xpath=//div[@id='memberoptionsmenu']/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/login')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": "Login"
+    }, {
+      "id": "6ad88d6a-6f60-42ee-a54f-120d5be042fb",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  },{
+    "id": "1009df56-af6d-4f49-988d-0d81b90d3a44",
+    "name": "craiglist",
+    "commands": [{
+      "id": "9ddc16e0-81ab-4e7b-a957-76ee0c8a3ef5",
+      "comment": "",
+      "command": "open",
+      "target": "https://newyork.craigslist.org/search/sss",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c015dd89-d05a-4d15-a5f1-3d576b55c297",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "690x982",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ea626033-7285-4cb5-84bb-3a9c280e11db",
+      "comment": "",
+      "command": "click",
+      "target": "id=query",
+      "targets": [
+        ["id=query", "id"],
+        ["name=query", "name"],
+        ["css=#query", "css:finder"],
+        ["xpath=//input[@id='query']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/input", "xpath:idRelative"],
+        ["xpath=//section/form/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3734e400-f4d1-438c-8ff4-d454c118a645",
+      "comment": "",
+      "command": "type",
+      "target": "id=query",
+      "targets": [
+        ["id=query", "id"],
+        ["name=query", "name"],
+        ["css=#query", "css:finder"],
+        ["xpath=//input[@id='query']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/input", "xpath:idRelative"],
+        ["xpath=//section/form/div/input", "xpath:position"]
+      ],
+      "value": "mask"
+    }, {
+      "id": "728016fa-8b57-4ddb-ac9f-6027de392ea9",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=query",
+      "targets": [
+        ["id=query", "id"],
+        ["name=query", "name"],
+        ["css=#query", "css:finder"],
+        ["xpath=//input[@id='query']", "xpath:attributes"],
+        ["xpath=//form[@id='searchform']/div/input", "xpath:idRelative"],
+        ["xpath=//section/form/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "1e417c02-b697-415c-b16a-3be9296d0c2c",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.search-legend:nth-child(3) .totalcount",
+      "targets": [
+        ["css=.search-legend:nth-child(3) .totalcount", "css:finder"],
+        ["xpath=//form[@id='searchform']/div[3]/div[3]/span[2]/span[3]/span[2]", "xpath:idRelative"],
+        ["xpath=//span[3]/span[2]", "xpath:position"]
+      ],
+      "value": "totalCount"
+    }, {
+      "id": "ee6e5528-144a-4478-9a7b-bb4204a8f158",
+      "comment": "",
+      "command": "echo",
+      "target": "${totalCount}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82c32d2c-76da-464d-ab35-afe335e84c56",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ((1*${totalCount}) > 300)",
+      "targets": [],
+      "value": "totalGt300"
+    }, {
+      "id": "accf313c-6ec5-492e-8a2f-7c19e4858464",
+      "comment": "",
+      "command": "echo",
+      "target": "${totalGt300}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6bbf054-9d8f-4718-a682-3aaadbe9b453",
+      "comment": "",
+      "command": "assert",
+      "target": "totalGt300",
+      "targets": [],
+      "value": "true"
+    }]
+  },{
+    "id": "99f608df-3719-4f15-b9b9-e02607640ce9",
+    "name": "uom-image",
+    "commands": [{
+      "id": "ad66e2aa-7981-46cf-96af-c95e014256fd",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.google.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "595485c0-1264-4e29-a3b4-95d297b6e7fd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1500x750",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "69e6b7d3-4adb-4419-b186-0d59cdc85fcf",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//form[@id='tsf']/div[2]/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_DOWN}"
+    }, {
+      "id": "23484249-fce7-4ce6-aef6-53399ef58097",
+      "comment": "",
+      "command": "type",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//form[@id='tsf']/div[2]/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "UoM"
+    }, {
+      "id": "4a622d40-953c-47e5-aaca-33d3b120c33a",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "name=q",
+      "targets": [
+        ["name=q", "name"],
+        ["css=.gLFyf", "css:finder"],
+        ["xpath=//input[@name='q']", "xpath:attributes"],
+        ["xpath=//form[@id='tsf']/div[2]/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "aa3ae33b-deca-483c-8bd5-10f7d2a873a8",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.YhemCb",
+      "targets": [
+        ["css=.YhemCb", "css:finder"],
+        ["xpath=//div[@id='rhs']/div/div/div/div/div/div/div[2]/div[2]/div[2]/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/span", "xpath:position"]
+      ],
+      "value": "Università"
+    }, {
+      "id": "432e1177-a4b7-40c0-9dd5-f37e46ad707f",
+      "comment": "",
+      "command": "storeAttribute",
+      "target": "css=a.ab_button@href",
+      "targets": [],
+      "value": "website"
+    }, {
+      "id": "dc753107-fac5-4328-81f3-9a090a4a82ee",
+      "comment": "",
+      "command": "echo",
+      "target": "${website}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b0d74146-93bf-4d5c-a3b2-05e23f176a22",
+      "comment": "",
+      "command": "assert",
+      "target": "website",
+      "targets": [],
+      "value": "http://www.um.edu.mt/"
+    }]
+  },{
+    "id": "6a698c38-49ec-4124-a106-b55185acd636",
+    "name": "createAndDeleteImdbAccount",
+    "commands": [{
+      "id": "664b1908-31a2-4d31-b00f-479a7a8ca473",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.imdb.com/registration/signin",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "353b7d2b-a469-43fb-9cd9-f9280a2c7584",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "825x815",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e33bbcdb-c659-43d8-9fb1-5db1661ac07d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Create a New Account",
+      "targets": [
+        ["linkText=Create a New Account", "linkText"],
+        ["css=.create-account", "css:finder"],
+        ["xpath=//a[contains(text(),'Create a New Account')]", "xpath:link"],
+        ["xpath=//div[@id='signin-options']/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'https://www.imdb.com/ap/register?openid.return_to=https%3A%2F%2Fwww.imdb.com%2Fregistration%2Fap-signin-handler%2Fimdb_us&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=imdb_us&openid.mode=checkid_setup&siteState=eyJvcGVuaWQuYXNzb2NfaGFuZGxlIjoiaW1kYl91cyIsInJlZGlyZWN0VG8iOiJodHRwczovL3d3dy5pbWRiLmNvbS8_cmVmXz1sb2dpbiJ9&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&tag=imdbtag_reg-20')]", "xpath:href"],
+        ["xpath=//div/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Create a New Account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3840c877-679b-49c7-89e5-e231440013e9",
+      "comment": "",
+      "command": "type",
+      "target": "id=ap_customer_name",
+      "targets": [
+        ["id=ap_customer_name", "id"],
+        ["name=customerName", "name"],
+        ["css=#ap_customer_name", "css:finder"],
+        ["xpath=//input[@id='ap_customer_name']", "xpath:attributes"],
+        ["xpath=//form[@id='ap_register_form']/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": " George Bonanno"
+    }, {
+      "id": "4c2ead18-99a4-4ae4-a9d9-70c6d054beb3",
+      "comment": "",
+      "command": "type",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//form[@id='ap_register_form']/div/div/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "george.bonanno@gmail.com"
+    }, {
+      "id": "a74a3879-080f-402b-a17e-fd6b81f3c5ba",
+      "comment": "",
+      "command": "type",
+      "target": "id=ap_password",
+      "targets": [
+        ["id=ap_password", "id"],
+        ["name=password", "name"],
+        ["css=#ap_password", "css:finder"],
+        ["xpath=//input[@id='ap_password']", "xpath:attributes"],
+        ["xpath=//form[@id='ap_register_form']/div/div/div[3]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div/input", "xpath:position"]
+      ],
+      "value": "DahnaKbira2."
+    }, {
+      "id": "495636cc-5b60-4c58-a329-e7f021f288ad",
+      "comment": "",
+      "command": "type",
+      "target": "id=ap_password_check",
+      "targets": [
+        ["id=ap_password_check", "id"],
+        ["name=passwordCheck", "name"],
+        ["css=#ap_password_check", "css:finder"],
+        ["xpath=//input[@id='ap_password_check']", "xpath:attributes"],
+        ["xpath=//form[@id='ap_register_form']/div/div/div[3]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "DahnaKbira2."
+    }, {
+      "id": "53f3d01d-8795-4eb6-985c-f421be019ded",
+      "comment": "",
+      "command": "click",
+      "target": "id=continue",
+      "targets": [
+        ["id=continue", "id"],
+        ["css=#continue", "css:finder"],
+        ["xpath=//input[@id='continue']", "xpath:attributes"],
+        ["xpath=//span[@id='a-autoid-0']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "92b86423-619b-4977-84ad-5cf034b1e223",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar__user-menu-toggle__name",
+      "targets": [
+        ["css=.navbar__user-menu-toggle__name", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/div[5]/div/label[2]/div/span", "xpath:idRelative"],
+        ["xpath=//label[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'George')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d02ac8c-07cd-4ded-a465-2b8005c3409b",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Account settings",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c535532c-eddb-40d6-90bb-ea3e31ced642",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Account settings",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6a642cb8-5303-46ec-a54d-5f0e022f906d",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//a[text()='Delete account']",
+      "targets": [],
+      "value": "deleteLinkCount"
+    }, {
+      "id": "e5797119-c372-4b4e-ae7b-56d428c047ae",
+      "comment": "",
+      "command": "echo",
+      "target": "${deleteLinkCount}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13069780-43ab-491b-adb4-f91a3bf91a6d",
+      "comment": "",
+      "command": "if",
+      "target": "${deleteLinkCount}==1",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "19f47c5f-2175-4197-a910-2a3c2c86c26a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Delete account",
+      "targets": [
+        ["linkText=Delete account", "linkText"],
+        ["css=.article:nth-child(3) li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Delete account')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div/div[3]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/registration/delete')]", "xpath:href"],
+        ["xpath=//div[3]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Delete account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "17fa5b04-2d5f-403a-8491-9a8b64df39e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pretty_btn",
+      "targets": [
+        ["css=.pretty_btn", "css:finder"],
+        ["xpath=//input[@value='Permanently Delete my Account']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "01ee4073-fe70-40a0-8fc9-a0431929f00e",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "deleted"
+    }, {
+      "id": "9fdf7689-0fb4-4206-88f9-a8cbb29d9fae",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5babe0fe-3cad-4a90-967d-4e0f207bb37f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Resend email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08332c37-4661-4fac-8483-2eea163605af",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=div.success h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//div[@id='main']/div/div/div/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Confirmation message re-sent.')]", "xpath:innerText"]
+      ],
+      "value": "Confirmation message re-sent."
+    }, {
+      "id": "a913ba35-c492-48f1-b54a-54e877e3ea14",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "deleted"
+    }, {
+      "id": "19ce0b83-8b08-4c89-98c3-84e01185aac5",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1838ff8b-534f-4f4f-93c7-53382f852650",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar__user-menu-toggle__name",
+      "targets": [
+        ["css=.navbar__user-menu-toggle__name", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/div[5]/div/label[2]/div/span", "xpath:idRelative"],
+        ["xpath=//label[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'George')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8ed3304c-154d-43dc-8c45-7fa312b3e57c",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Sign out",
+      "targets": [
+        ["linkText=Account settings", "linkText"],
+        ["css=.imdb-header__account-menu > .ipc-list__item:nth-child(7)", "css:finder"],
+        ["xpath=//span[@id='navUserMenu-contents']/ul/a[6]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/registration/accountsettings?ref_=nv_usr_pers_1')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/span/ul/a[6]", "xpath:position"],
+        ["xpath=//a[contains(.,'Account settings')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "554285a7-23ac-4004-b169-1f6ffe87740f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign out",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "176ee0e5-2c29-4b6b-ac2f-1c6a9b184a7a",
+      "comment": "",
+      "command": "if",
+      "target": "${deleted}==1",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "60a947ba-3461-4d4c-9237-0e4fc7641b0c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.imdb-header__signin-text > .ipc-button__text",
+      "targets": [
+        ["css=.imdb-header__signin-text > .ipc-button__text", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/div[5]/a/div", "xpath:idRelative"],
+        ["xpath=//div[5]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f318648-c2c0-4439-8bd9-79b1136af588",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-group-item:nth-child(1) > .auth-provider-text",
+      "targets": [
+        ["css=.imdb-header__signin-text > .ipc-button__text", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/div[5]/a/div", "xpath:idRelative"],
+        ["xpath=//div[5]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1dcf308b-f2a4-4560-a809-33f70fc33740",
+      "comment": "",
+      "command": "click",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "210bec9e-9329-4064-a1e0-bbdc1354da06",
+      "comment": "",
+      "command": "type",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "george.bonanno@gmail.com"
+    }, {
+      "id": "d88d0db3-65d1-4437-af36-45196c549f32",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "${KEY_DOWN}"
+    }, {
+      "id": "a4dc7c5a-6b93-4ae1-83ae-9a16e122f317",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "${KEY_TAB}"
+    }, {
+      "id": "16757d24-c6e6-453b-bd11-35b66a2a50ec",
+      "comment": "",
+      "command": "type",
+      "target": "id=ap_password",
+      "targets": [
+        ["id=ap_password", "id"],
+        ["name=password", "name"],
+        ["css=#ap_password", "css:finder"],
+        ["xpath=//input[@id='ap_password']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "DahnaKbira2."
+    }, {
+      "id": "318601d3-5d38-461e-bca3-442b94c5f4b6",
+      "comment": "",
+      "command": "click",
+      "target": "id=signInSubmit",
+      "targets": [
+        ["id=signInSubmit", "id"],
+        ["css=#signInSubmit", "css:finder"],
+        ["xpath=//input[@id='signInSubmit']", "xpath:attributes"],
+        ["xpath=//span[@id='a-autoid-0']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "655d7ff1-33be-4d63-a00c-80c4e9250d5b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=div.a-alert-content span.a-list-item",
+      "targets": [],
+      "value": "We cannot find an account with that email address"
+    }, {
+      "id": "1c13b8f3-6359-4e7f-b50f-3914e76de05e",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ea681903-14b0-4777-a0f4-58589513f0be",
+    "name": "deleteImdbAccount",
+    "commands": [{
+      "id": "136ac2a6-eeff-4965-8020-1709fec6b8f5",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.imdb.com/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "978237c2-63c9-473f-96ea-c6b6a56b61d7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "940x907",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f2fcf116-ae4a-4990-9329-4e133b921167",
+      "comment": "",
+      "command": "executeScript",
+      "target": "var logInLink=document.querySelector('.imdb-header__signin-text > .ipc-button__text'); return logInLink ? logInLink.innerText : \"\"",
+      "targets": [],
+      "value": "signInText"
+    }, {
+      "id": "27ca40d8-97ea-48af-9a3c-3b579c2d2534",
+      "comment": "",
+      "command": "if",
+      "target": "${signInText}==\"Sign In\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "162f0e6a-bb84-4739-ab68-364a58157239",
+      "comment": "",
+      "command": "click",
+      "target": "css=.imdb-header__signin-text > .ipc-button__text",
+      "targets": [
+        ["css=.imdb-header__signin-text > .ipc-button__text", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/div[5]/a/div", "xpath:idRelative"],
+        ["xpath=//div[5]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0633341d-95cf-4fc0-8d4c-bba25cceac41",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-group-item:nth-child(1) > .auth-provider-text",
+      "targets": [
+        ["css=.list-group-item:nth-child(1) > .auth-provider-text", "css:finder"],
+        ["xpath=//div[@id='signin-options']/div/div/a/span[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in with IMDb')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "170b14c3-53c8-4f6f-850f-3ec49da3732b",
+      "comment": "",
+      "command": "type",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "george.bonanno@gmail.com"
+    }, {
+      "id": "b7deb89b-b3d2-4f8f-8287-1a4e3936beb9",
+      "comment": "",
+      "command": "click",
+      "target": "id=ap_password",
+      "targets": [
+        ["id=ap_password", "id"],
+        ["name=password", "name"],
+        ["css=#ap_password", "css:finder"],
+        ["xpath=//input[@id='ap_password']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28f54ca6-4529-41ac-8959-545e001ae425",
+      "comment": "",
+      "command": "type",
+      "target": "id=ap_password",
+      "targets": [
+        ["id=ap_password", "id"],
+        ["name=password", "name"],
+        ["css=#ap_password", "css:finder"],
+        ["xpath=//input[@id='ap_password']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "DahnaKbira2."
+    }, {
+      "id": "cb1323ef-cc19-4c04-93ee-1fccf148617f",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=ap_password",
+      "targets": [
+        ["id=ap_password", "id"],
+        ["name=password", "name"],
+        ["css=#ap_password", "css:finder"],
+        ["xpath=//input[@id='ap_password']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "bd1f4c68-e7af-4854-8beb-a3e90d338147",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e2d33bd3-cb4b-41c4-8d09-df760fa7d427",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar__user-menu-toggle__name",
+      "targets": [
+        ["css=.navbar__user-menu-toggle__name", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/div[5]/div/label[2]/div/span", "xpath:idRelative"],
+        ["xpath=//label[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'George')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "02b89e8b-0ad4-4b30-84b2-08fd817b351f",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Account settings",
+      "targets": [
+        ["linkText=Account settings", "linkText"],
+        ["css=.imdb-header__account-menu > .ipc-list__item:nth-child(7)", "css:finder"],
+        ["xpath=//span[@id='navUserMenu-contents']/ul/a[6]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/registration/accountsettings?ref_=nv_usr_pers_1')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/span/ul/a[6]", "xpath:position"],
+        ["xpath=//a[contains(.,'Account settings')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b9f56f9-7911-46ae-95d5-c64c6dd92f18",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Account settings",
+      "targets": [
+        ["linkText=Account settings", "linkText"],
+        ["css=.imdb-header__account-menu > .ipc-list__item:nth-child(7)", "css:finder"],
+        ["xpath=//span[@id='navUserMenu-contents']/ul/a[6]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/registration/accountsettings?ref_=nv_usr_pers_1')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/span/ul/a[6]", "xpath:position"],
+        ["xpath=//a[contains(.,'Account settings')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a642cb8-5303-46ec-a54d-5f0e022f906d",
+      "comment": "",
+      "command": "storeXpathCount",
+      "target": "xpath=//a[text()='Delete account']",
+      "targets": [],
+      "value": "deleteLinkCount"
+    }, {
+      "id": "e5797119-c372-4b4e-ae7b-56d428c047ae",
+      "comment": "",
+      "command": "echo",
+      "target": "${deleteLinkCount}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "13069780-43ab-491b-adb4-f91a3bf91a6d",
+      "comment": "",
+      "command": "if",
+      "target": "${deleteLinkCount}==1",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "19f47c5f-2175-4197-a910-2a3c2c86c26a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Delete account",
+      "targets": [
+        ["linkText=Delete account", "linkText"],
+        ["css=.article:nth-child(3) li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Delete account')]", "xpath:link"],
+        ["xpath=//div[@id='main']/div/div[3]/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/registration/delete')]", "xpath:href"],
+        ["xpath=//div[3]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Delete account')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "17fa5b04-2d5f-403a-8491-9a8b64df39e2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.pretty_btn",
+      "targets": [
+        ["css=.pretty_btn", "css:finder"],
+        ["xpath=//input[@value='Permanently Delete my Account']", "xpath:attributes"],
+        ["xpath=//div[@id='main']/div/form/input[2]", "xpath:idRelative"],
+        ["xpath=//form/input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dfe7102b-27ac-4ca9-90eb-ae9505da6896",
+      "comment": "",
+      "command": "store",
+      "target": "1",
+      "targets": [],
+      "value": "deleted"
+    }, {
+      "id": "0bad6c8c-5501-4ab1-88ab-b86b8e7d4079",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0495e3b-db46-449e-a9f3-4a7afa081cba",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Resend email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "981e538e-8ef1-43d8-bf39-5e912a87233c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=div.success h2",
+      "targets": [
+        ["css=h2", "css:finder"],
+        ["xpath=//div[@id='main']/div/div/div/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Confirmation message re-sent.')]", "xpath:innerText"]
+      ],
+      "value": "Confirmation message re-sent."
+    }, {
+      "id": "87918260-03ef-490d-bd8d-2a0d9ef3fcb5",
+      "comment": "",
+      "command": "store",
+      "target": "0",
+      "targets": [],
+      "value": "deleted"
+    }, {
+      "id": "c3926933-eb9b-4052-9b10-afc6c23cc749",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8e88f2bd-589a-40b5-9e21-be7be6dafac5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.navbar__user-menu-toggle__name",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35689f84-18a8-41bf-82f2-11fb5bbbfcd5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.navbar__user-menu-toggle__name",
+      "targets": [
+        ["css=.navbar__user-menu-toggle__name", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/div[5]/div/label[2]/div/span", "xpath:idRelative"],
+        ["xpath=//label[2]/div/span", "xpath:position"],
+        ["xpath=//span[contains(.,'George')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1e5f364-4a63-4aa2-8b95-8b02ed996dd7",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Sign out",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bc6ebedd-331c-4549-bf48-2c7afb707e04",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Sign out",
+      "targets": [
+        ["linkText=Sign out", "linkText"],
+        ["css=.imdb-header-account-menu__sign-out", "css:finder"],
+        ["xpath=//span[@id='navUserMenu-contents']/ul/a[7]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/registration/logout?ref=nv_usr_lgout_6')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/span/ul/a[7]", "xpath:position"],
+        ["xpath=//a[contains(.,'Sign out')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3f4bbe7f-e3d6-4580-97f5-0f9da4dcc501",
+      "comment": "",
+      "command": "if",
+      "target": "${deleted}==1",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "dfd77f57-1d16-4ba9-baef-105c80cc51c8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.imdb-header__signin-text > .ipc-button__text",
+      "targets": [
+        ["css=.imdb-header__signin-text > .ipc-button__text", "css:finder"],
+        ["xpath=//nav[@id='imdbHeader']/div[2]/div[5]/a/div", "xpath:idRelative"],
+        ["xpath=//div[5]/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f318648-c2c0-4439-8bd9-79b1136af588",
+      "comment": "",
+      "command": "click",
+      "target": "css=.list-group-item:nth-child(1) > .auth-provider-text",
+      "targets": [
+        ["css=.list-group-item:nth-child(1) > .auth-provider-text", "css:finder"],
+        ["xpath=//div[@id='signin-options']/div/div/a/span[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Sign in with IMDb')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1dcf308b-f2a4-4560-a809-33f70fc33740",
+      "comment": "",
+      "command": "click",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "210bec9e-9329-4064-a1e0-bbdc1354da06",
+      "comment": "",
+      "command": "type",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "george.bonanno@gmail.com"
+    }, {
+      "id": "d88d0db3-65d1-4437-af36-45196c549f32",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "${KEY_DOWN}"
+    }, {
+      "id": "a4dc7c5a-6b93-4ae1-83ae-9a16e122f317",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=ap_email",
+      "targets": [
+        ["id=ap_email", "id"],
+        ["name=email", "name"],
+        ["css=#ap_email", "css:finder"],
+        ["xpath=//input[@id='ap_email']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "${KEY_TAB}"
+    }, {
+      "id": "16757d24-c6e6-453b-bd11-35b66a2a50ec",
+      "comment": "",
+      "command": "type",
+      "target": "id=ap_password",
+      "targets": [
+        ["id=ap_password", "id"],
+        ["name=password", "name"],
+        ["css=#ap_password", "css:finder"],
+        ["xpath=//input[@id='ap_password']", "xpath:attributes"],
+        ["xpath=//div[@id='authportal-main-section']/div[2]/div/div/form/div/div/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "DahnaKbira2."
+    }, {
+      "id": "318601d3-5d38-461e-bca3-442b94c5f4b6",
+      "comment": "",
+      "command": "click",
+      "target": "id=signInSubmit",
+      "targets": [
+        ["id=signInSubmit", "id"],
+        ["css=#signInSubmit", "css:finder"],
+        ["xpath=//input[@id='signInSubmit']", "xpath:attributes"],
+        ["xpath=//span[@id='a-autoid-0']/span/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "655d7ff1-33be-4d63-a00c-80c4e9250d5b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=div.a-alert-content span.a-list-item",
+      "targets": [],
+      "value": "We cannot find an account with that email address"
+    }, {
+      "id": "cf880909-80de-47c2-a9c4-856e1d9c9ca1",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "15fb0886-cb8c-4798-b3a9-d051dd03efa5",
+    "name": "openGmailAndConfirmRegistration",
+    "commands": [{
+      "id": "9b995cea-80ee-4d8f-abe6-cdd31635867b",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.gmail.com",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b28c2a6-b7f6-401f-8ad8-2c2f6ef52657",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//span[@name='IMDb User Registrat.'])[2]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca234d82-b187-42e5-a371-589f74140d98",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//p[contains(text(),\"Please confirm\")]/a",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "264c24e5-ef5d-42fb-8fe4-a1e1c4c1aed3",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6a698c38-49ec-4124-a106-b55185acd636"]
+  }],
+  "urls": ["https://www.bbc.com/", "https://newyork.craigslist.org/search/", "https://www.google.com/", "https://www.imdb.com/registration/signin"],
+  "plugins": []
+}
